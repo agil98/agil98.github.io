@@ -93,8 +93,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://agil98.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
   <link rel="stylesheet" href="https://agil98.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://agil98.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous"><script>
+    var i = 0;
+    var txt = 'Lorem ipsum dummy text blabla.';
+    var speed = 50;
+    
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementsById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+</script>
 
 
   </head>
@@ -215,14 +226,43 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="resume-heading">
+              <style>
+              .typewriter h2 {
+                float:center;
+                overflow: hidden;  
+                border-right: .15em solid grey;  
+                white-space: nowrap;  
+                margin: 0 auto;  
+                letter-spacing: .15em;  
+                animation: 
+                  typing 3.5s steps(40, end),
+                  blink-caret .75s step-end infinite;
+              }
+
+               
+              @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+              }
+
+               
+              @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: grey; }
+              }
+              </style>
+              
               
                 <h1>Resume</h1>
               
               
+              <div class="typewriter">
                 <hr class="small">
               
               
               
+
+              </div>
             </div>
           </div>
         </div>
@@ -232,6 +272,243 @@
 
 
     
+<style>
+    .timeline {
+    position: relative;
+}
+
+.timeline h2 {
+    position: relative;
+}
+
+body {
+   zoom: 95%;
+}
+
+
+.timeline h2 [class^="icon-"], .timeline h2 [class*=" icon-"], .timeline h2 .fa {
+    display: block;
+    font-size: 30px;
+    position: absolute;
+    top: -24px;
+    left: -100px;
+    width: 86px;
+    line-height: 78px;
+    margin: 0;
+    z-index: 120;
+}
+
+.timeline h2 [class^="icon-"]:before, .timeline h2 [class*=" icon-"]:before, .timeline h2 i.fa:before {
+    margin: 0;
+}
+
+.timeline .event:first-of-type .date {
+    background: #3973ac;
+}
+
+.timeline .event:last-child p:before {
+    display: None
+}
+
+.summary {
+    font-size: 14px;
+    font-family: Open Sans; 
+}
+
+ 
+.event {
+    position: relative;
+    padding: 10px 15px;
+    margin-bottom: 1em;
+    background: #ffffff;
+    border: 3px solid #DDE4E6;
+    border-radius: 6px;
+}
+
+ 
+.event:after, .event:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.event:after {
+    border-right-color: #ffffff;
+    border-width: 10px;
+    margin-top: -10px;
+}
+
+.event:before {
+    border-right-color: #DDE4E6;
+    border-width: 15px;
+    margin-top: -15px;
+}
+
+.event .date {
+    position: absolute;
+    top: 45%;
+    margin-top: -24px;
+    left: -94px;
+    width: 68px;
+    line-height: 65px;
+    text-align: center;
+    background: #6699cc;
+    display: block;
+    z-index: 120;
+    color: #fff;
+    border-radius: 50%;
+    border: 0px solid #FFF;
+}
+
+.event h4 {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.event h5 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.event p {
+    margin: .6em 0 .2em 0
+}
+
+.event p:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -62px;
+    height: 225%;
+    width: 5px;
+    background: #DDE4E6;
+}
+
+ 
+
+.skillset {
+    padding: 0 0 3.2em 0
+}
+
+.skill-unit {
+    padding-bottom: 0
+}
+
+.skill-unit h4 {
+    margin-bottom: -30px;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    padding-left: 14px;
+    text-transform: uppercase;
+}
+
+.skill-unit .bar {
+    position: relative;
+    width: 100%;
+    height: 36px;
+}
+
+.skill-unit .bar .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 4px;
+    background: #5BCF80;
+     
+}
+
+
+ 
+
+.testo-group {
+    padding: 1em 0 2em 0;
+}
+
+.testo {
+    position: relative;
+    padding: 1.4em 2.2em;
+    margin: 0 16px 40px 0;
+    background: #EFF4F5;
+    border-radius: 6px;
+}
+
+.testo:before {
+    display: block;
+    content: "\f10d";
+    line-height: 1;
+    font-size: 14px;
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #fff;
+    border: 3px solid #FFF;
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+
+.testo img {
+    display: block;
+    float: right;
+    max-width: 100px;
+    border-radius: 50%;
+    margin: -40px -60px 10px 20px;
+    border: 8px solid #fff;
+}
+
+.testo h4 {
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #6A7686;
+}
+
+.testo h4 span {
+    display: inline-block;
+    margin-left: 1em;
+    font-size: .8em;
+    color: #BFC5CD;
+}
+
+.testo p {
+    position: relative;
+    margin: .6em 0 0.2em 0;
+    line-height: 150%;
+    color: #6A7686;
+}
+
+
+ 
+
+h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
+    font-size: 22px;
+    margin-right: 16px;
+    line-height: 39px;
+    text-align: center;
+    color: #B7C6C9;
+    background: #fff;
+    border-radius: 50%;
+    border: 4px solid #dde4e6;
+    display: inline-block;
+    width: 47px;
+}
+
+h2 i[class^="icon-"]:before, h2 i[class*=" icon-"]:before, h2 i.fa:before {
+    display: inline;
+    margin-left: 0;
+    margin-right: 0;
+}
+</style>
 <div role="main" class="container">
     <div class="row">
         <div class="col-md-6">
@@ -304,7 +581,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <h2 class="section-title"><span><i class="fa fa-tachometer-alt"></i>Skills</span></h2>
+            <h2 class="section-title"><span><i class="fa fa-code"></i>Skills</span></h2>
             <ul>
                 
                 <li>Python</li>
